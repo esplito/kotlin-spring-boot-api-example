@@ -17,3 +17,5 @@ I have checklist of things that I want to try. See below.
 - [ ] Add unit testing
 - [ ] Add integration testing
 - [ ] Explore API mocking in integration tests (when calling external service)
+
+You can find [my notes here](./NOTES.md).
