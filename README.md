@@ -2,6 +2,8 @@
 
 In this repository I'm playing around with Kotlin & Spring Boot to get a feel for how it is to develop APIs using those technologies.
 
+I'm initially following [Kotlin's official guide](https://kotlinlang.org/docs/jvm-get-started-spring-boot.html) for setting this up.
+
 ## Checklist
 
 I have checklist of things that I want to try. See below.
