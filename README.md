@@ -8,11 +8,12 @@ I'm initially following [Kotlin's official guide](https://kotlinlang.org/docs/jv
 
 I have checklist of things that I want to try. See below.
 
-- [ ] Create a RESTful web service with H2 Database 
-- [ ] Add endpoint for CREATE 
-- [ ] Add endpoint for READ
+- [x] Create a RESTful web service with H2 Database 
+- [x] Add endpoint for CREATE 
+- [x] Add endpoint for READ (fetch all or by id)
 - [ ] Add endpoint for UPDATE
 - [ ] Add endpoint for DELETE
+- [ ] Add error handling with a common error response model
 - [ ] Generate Swagger with OpenAPI
 - [ ] Add unit testing
 - [ ] Add integration testing
