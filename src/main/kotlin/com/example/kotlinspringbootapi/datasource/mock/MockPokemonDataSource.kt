@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 @Repository
 class MockPokemonDataSource : PokemonDataSource {
 
-    val pokemons = listOf(Pokemon("Charmander", "https://pokeapi.co/api/v2/pokemon/4/",), Pokemon("Bulbasaur", "https://pokeapi.co/api/v2/pokemon/1/"))
+    val pokemons = listOf(Pokemon("Bulbasaur", "https://pokeapi.co/api/v2/pokemon/1/"), Pokemon("Charmander", "https://pokeapi.co/api/v2/pokemon/4/",))
     override fun retrievePokemons(): Collection<Pokemon> = pokemons
 }

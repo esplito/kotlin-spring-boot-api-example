@@ -21,3 +21,6 @@ The tutorial ended with a link to a [PDF that can be used for a personal develop
 
 I will look into this tutorial: https://kotlinlang.org/docs/jvm-test-using-junit.html
 I've also looked at this Youtube playlist: https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDPsneZWaOFg0H2wsundyGr
+
+The structure of the API based on the Youtube playlist:
+![Illustration of web layer -> service layer -> data source -> data layer](./structure-kotlin-spring-boot-api.png)

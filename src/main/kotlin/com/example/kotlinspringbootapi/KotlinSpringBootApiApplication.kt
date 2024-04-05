@@ -3,8 +3,8 @@ package com.example.kotlinspringbootapi
 import com.example.kotlinspringbootapi.model.Message
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.data.annotation.Id
-import org.springframework.data.relational.core.mapping.Table
+import org.springframework.boot.web.client.RestTemplateBuilder
+import org.springframework.context.annotation.Bean
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.GetMapping
@@ -12,10 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.client.RestTemplate
 import java.util.*
 
 @SpringBootApplication
-class KotlinSpringBootApiApplication
+class KotlinSpringBootApiApplication {
+    @Bean
+    fun restTemplate(builder: RestTemplateBuilder): RestTemplate = builder.build()
+}
 
 fun main(args: Array<String>) {
     runApplication<KotlinSpringBootApiApplication>(*args)
