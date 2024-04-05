@@ -1,5 +1,6 @@
 package com.example.kotlinspringbootapi
 
+import com.example.kotlinspringbootapi.model.Message
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.data.annotation.Id
@@ -22,15 +23,6 @@ fun main(args: Array<String>) {
 
 interface MessageRepository : CrudRepository<Message, String>
 
-/* Message class will be used for data transfer: a list of serialized Message objects will make up the JSON document that the controller is going to respond to the browser request.
-The main purpose of data classes in Kotlin is to hold data. Such classes are marked with the data keyword, and some standard functionality and some utility functions are often mechanically derivable from the class structure.
-
-- `val` keyword means that it is read-only
-- `var` keyword means that it is mutable
-- `String?` is an example of a nullable reference (which means that it can hold the value null)
-*/
-@Table("MESSAGES")
-data class Message(@Id var id: String?, val text: String)
 
 /*
  `val db: JdbcTemplate` is the constructor's argument.
