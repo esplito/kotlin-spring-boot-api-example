@@ -24,3 +24,6 @@ I've also looked at this Youtube playlist: https://www.youtube.com/playlist?list
 
 The structure of the API based on the Youtube playlist:
 ![Illustration of web layer -> service layer -> data source -> data layer](./structure-kotlin-spring-boot-api.png)
+
+## Mocking libraries
+- Tested https://mockk.io/ & built-in mockMvc

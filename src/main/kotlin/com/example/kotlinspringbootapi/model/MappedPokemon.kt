@@ -9,6 +9,8 @@ data class MappedPokemon (
     val id: String
 )
 
+
+// Inspired by the guide here: https://www.baeldung.com/kotlin/data-objects
 fun Pokemon.toMappedPokemon() = MappedPokemon(
     name = name,
     url = url,
