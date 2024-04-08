@@ -7,17 +7,23 @@ Content-Type: application/json
 }
 
 ### Post "Bonjour!"
-
 POST http://localhost:8080/
 Content-Type: application/json
 
 {
-  "id": "be1466b8-6b8e-419d-be76-772d28463ab1",
+  "id": "68b8602d-8995-4844-abbb-d0dde9581538",
   "text": "Bonjour!"
 }
 
-### Post "Privet!"
 
+### Delete "Bonjour!
+DELETE http://localhost:8080/68b8602d-8995-4844-abbb-d0dde9581538
+Content-Type: application/json
+
+{
+}
+
+### Post "Privet!"
 POST http://localhost:8080/
 Content-Type: application/json
 
@@ -30,3 +36,12 @@ GET http://localhost:8080/
 
 ### Get the message by its id
 GET http://localhost:8080/be1466b8-6b8e-419d-be76-772d28463ab1
+
+### Get First generation pokemons
+GET http://localhost:8080/api/pokemons
+
+### Get Pokemon by id
+GET http://localhost:8080/api/pokemons/1
+
+### Get Pokemon by id that does not exist
+GET http://localhost:8080/api/pokemons/a

@@ -1,6 +1,9 @@
 package com.example.kotlinspringbootapi.controller
 
-import org.junit.jupiter.api.Assertions.*
+import com.github.tomakehurst.wiremock.WireMockServer
+import com.github.tomakehurst.wiremock.client.WireMock.*
+import com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig
+import org.junit.jupiter.api.BeforeAll
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
@@ -8,6 +11,7 @@ import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
 import kotlin.test.Test
+
 
 // Integration test that will set up application context. Beware, this can be expensive.
 @SpringBootTest
@@ -41,15 +45,33 @@ class PokemonControllerTest {
             }
     }
 
-    // TODO: Continue with this test and implementation of endpoint
     @Test
     fun `should return the pokemon with the given id`() {
-        // given
-
-        // when
-
-        // then
+        mockMvc.get("/api/pokemons/1")
+            .andDo { print() }
+            .andExpect {
+                status { isOk() }
+                content { contentType(MediaType.APPLICATION_JSON) }
+                jsonPath("$.forms[0].name") {
+                    value("bulbasaur")
+                }
+                jsonPath("$.abilities.[0].ability.name") {
+                    value("overgrow")
+                }
+            }
 
     }
 
+}
+
+class PokemonControllerTestWithMocks {
+    val server = WireMockServer(wireMockConfig().dynamicPort())
+
+    @Test
+    fun `returns json`() {
+        server.start()
+        configureFor("localhost", server.port())
+
+        // TODO: Add stub
+    }
 }

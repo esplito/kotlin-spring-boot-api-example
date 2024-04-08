@@ -11,12 +11,12 @@ I have checklist of things that I want to try. See below.
 - [x] Create a RESTful web service with H2 Database 
 - [x] Add endpoint for CREATE 
 - [x] Add endpoint for READ (fetch all or by id)
-- [ ] Add endpoint for UPDATE
-- [ ] Add endpoint for DELETE
-- [ ] Add error handling with a common error response model
+- [x] Add endpoint for UPDATE
+- [X] Add endpoint for DELETE
+- [x] Add error handling (404 Not Found added)
 - [ ] Generate Swagger with OpenAPI
-- [ ] Add unit testing
-- [ ] Add integration testing
+- [x] Add unit testing (Testing with Mockk in PokemonService)
+- [x] Add integration testing (Testing with SpringBootTest)
 - [ ] Explore API mocking in integration tests (when calling external service)
 
 You can find [my notes here](./NOTES.md).
