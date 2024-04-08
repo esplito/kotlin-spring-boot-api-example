@@ -25,7 +25,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.wiremock:wiremock:3.5.2")
+    testImplementation("org.wiremock:wiremock-jetty12:3.5.2")
    testImplementation("io.kotest.extensions:kotest-extensions-wiremock:3.0.1")
     testImplementation(kotlin("test"))
     testImplementation("io.mockk:mockk:1.13.10")

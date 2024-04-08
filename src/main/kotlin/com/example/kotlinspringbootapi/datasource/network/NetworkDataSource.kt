@@ -1,10 +1,13 @@
 package com.example.kotlinspringbootapi.datasource.network
 
+import com.example.kotlinspringbootapi.AppProperties
 import com.example.kotlinspringbootapi.datasource.PokemonDataSource
 import com.example.kotlinspringbootapi.datasource.network.dto.PokemonList
 import com.example.kotlinspringbootapi.model.Pokemon
 import com.example.kotlinspringbootapi.model.PokemonDetail
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Repository
 import org.springframework.web.client.RestTemplate
@@ -13,17 +16,20 @@ import java.io.IOException
 
 @Repository("network")
 class NetworkDataSource(
-    @Autowired private val restTemplate: RestTemplate
+    @Autowired private val restTemplate: RestTemplate,
 ) : PokemonDataSource {
+    @Autowired
+    lateinit var appProperties: AppProperties
+
     override fun retrievePokemons(): Collection<Pokemon> {
-        val response: ResponseEntity<PokemonList> = restTemplate.getForEntity("https://pokeapi.co/api/v2/pokemon?limit=151")
+        val response: ResponseEntity<PokemonList> = restTemplate.getForEntity("${appProperties.host}/api/v2/pokemon?limit=151")
 
         return response.body?.results
             ?: throw IOException("Could not fetch pokemons from the network")
     }
 
    override fun retrievePokemonById(id: String): PokemonDetail {
-        val response: ResponseEntity<PokemonDetail> = restTemplate.getForEntity("https://pokeapi.co/api/v2/pokemon/$id/")
+        val response: ResponseEntity<PokemonDetail> = restTemplate.getForEntity("${appProperties.host}/api/v2/pokemon/$id/")
 
         return response?.body
             ?: throw IOException("Could not fetch specified pokemon from the network")
