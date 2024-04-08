@@ -27,3 +27,4 @@ The structure of the API based on the Youtube playlist:
 
 ## Mocking libraries
 - Tested https://mockk.io/ & built-in mockMvc
+- Testing https://wiremock.org/docs/ for stubbing external requests (but it is not so easy to get working as the others)
