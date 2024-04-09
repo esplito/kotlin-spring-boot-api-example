@@ -7,7 +7,6 @@ import org.springframework.boot.web.client.RestTemplateBuilder
 import org.springframework.context.annotation.Bean
 import org.springframework.web.client.RestTemplate
 
-// @OpenAPIDefinition(servers = [Server(url = "/kotlin-example-api", description = "This API is built with Kotlin & Spring Boot and has some example CRUD operations in messages-endpoints. The Pokemon-endpoints are used for showing an example of integrating towards an external API.")])
 @SpringBootApplication
 class KotlinSpringBootApiApplication {
     @Bean
