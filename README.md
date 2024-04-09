@@ -14,9 +14,9 @@ I have checklist of things that I want to try. See below.
 - [x] Add endpoint for UPDATE
 - [X] Add endpoint for DELETE
 - [x] Add error handling (404 Not Found added)
-- [ ] Generate Swagger with OpenAPI
+- [ ] Generate Swagger with OpenAPI 🚧
 - [x] Add unit testing (Testing with Mockk in PokemonService)
 - [x] Add integration testing (Testing with SpringBootTest)
-- [ ] Explore API mocking in integration tests (when calling external service)
+- [ ] Explore API mocking in integration tests (when calling external service) 🚧 
 
 You can find [my notes here](./NOTES.md).
