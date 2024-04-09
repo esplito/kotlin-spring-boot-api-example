@@ -9,6 +9,7 @@ import java.util.NoSuchElementException
 
 
 @RestController
+@RequestMapping("/api/messages")
 class MessageController (val service: MessageService) {
     /*
     fun index(@RequestParam("name") name: String) = "Hello, $name!"
@@ -25,13 +26,13 @@ class MessageController (val service: MessageService) {
     @ExceptionHandler(NoSuchElementException::class)
     fun handleNotFound(e: NoSuchElementException): ResponseEntity<String> = ResponseEntity(e.message, HttpStatus.NOT_FOUND)
 
-    @GetMapping("/")
+    @GetMapping()
     fun index(): List<Message> = service.findMessages()
 
     @GetMapping("/{id}")
     fun index(@PathVariable id: String): List<Message> = service.findMessageById(id)
 
-    @PostMapping("/")
+    @PostMapping()
     fun post(@RequestBody message: Message) {
         // Works as both CREATE & UPDATE
         service.save(message)
