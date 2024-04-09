@@ -5,6 +5,6 @@ import org.springframework.stereotype.Component
 
 @Component
 class AppProperties {
-    @Value("\${api.pokemon.host}")
+    @Value("\${api.pokemon.url}")
     lateinit var host: String
 }

@@ -35,6 +35,7 @@ The structure of the API based on the Youtube playlist:
    Some of the resources I've checked:
     - https://www.turtlestoffel.com/topics/programming/kotlin/functional-testing
     - https://medium.com/cuddle-ai/testing-spring-boot-application-using-wiremock-and-junit-5-d514a47ab931
+    - https://www.schibsted.pl/blog/integration-testing-deep-dive-part-i/ (This one helped me solve it finally. 🙏)
 2. Getting Swagger UI generation to work took some digging. Articles that I found were not updated to latest versions of springdoc etc.
    These resources helped me in solving it:
    - https://github.com/springdoc/springdoc-openapi-gradle-plugin/issues/121

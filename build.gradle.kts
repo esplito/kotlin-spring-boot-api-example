@@ -28,8 +28,7 @@ dependencies {
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.wiremock:wiremock-jetty12:3.5.2")
-    testImplementation("io.kotest.extensions:kotest-extensions-wiremock:3.0.1")
+    testImplementation("org.springframework.cloud:spring-cloud-contract-wiremock:4.1.2")
     testImplementation(kotlin("test"))
     testImplementation("io.mockk:mockk:1.13.10")
 }

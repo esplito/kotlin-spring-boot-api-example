@@ -17,7 +17,7 @@ I have checklist of things that I want to try. See below.
 - [x] Generate Swagger with OpenAPI
 - [x] Add unit testing (Testing with Mockk in PokemonService)
 - [x] Add integration testing (Testing with SpringBootTest)
-- [ ] Explore API mocking in integration tests (when calling external service) 🚧 
+- [x] Explore API mocking in integration tests (when calling external service)
 
 ## Notes
 
