@@ -29,9 +29,35 @@ The structure of the API based on the Youtube playlist:
 - Tested https://mockk.io/ & built-in mockMvc
 - Testing https://wiremock.org/docs/ for stubbing external requests (but it is not so easy to get working as the others)
 
+
 ## Issues 🚨
 1. There's a lack of good documentation for configuring Wiremock with Kotlin + Spring Boot (and JUnit 5). I've gone through several community-made articles/guides to try and find a good solution, but have failed so far. 
+   Some of the resources I've checked:
+    - https://www.turtlestoffel.com/topics/programming/kotlin/functional-testing
+    - https://medium.com/cuddle-ai/testing-spring-boot-application-using-wiremock-and-junit-5-d514a47ab931
+
 
 ## Highlights
 1. I like how much "Java boilerplate" that Kotlin seems to have removed. Defining classes and functions is a joy and feels more similar to what I'm used to in the Javascript world. 😊
 2. It was easy to get started with the basics just by just following Kotlin's own docs. 
+
+
+## Ideas after exploring this
+I really want to the same thing with some other languages & frameworks, just to get a feel for how they are to work with. 
+It will just give me an initial impression/feeling, but I believe that it might benefit my work in the future. I've worked with Java + Spring Boot & Node.js + Express professionally so I'll not include them in this exploration.
+
+I aim to try the following:
+- [ ] Go + Gin 
+  - Tutorial: https://go.dev/doc/tutorial/web-service-gin
+  - Testing resources: 
+    - https://gin-gonic.com/docs/testing/
+    - https://apitest.dev/
+- [ ] Rust + Axum (+ Tokio & Serde)
+  - Tutorial: https://www.twilio.com/en-us/blog/build-high-performance-rest-apis-rust-axum
+  - Testing resources:
+    - https://docs.rs/axum-test/latest/axum_test/
+    - https://github.com/alexliesenfeld/httpmock
+- [ ] C# + .NET Core
+  - Tutorial: https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio
+  - Testing resources:
+    - https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-8.0
