@@ -14,9 +14,17 @@ I have checklist of things that I want to try. See below.
 - [x] Add endpoint for UPDATE
 - [X] Add endpoint for DELETE
 - [x] Add error handling (404 Not Found added)
-- [ ] Generate Swagger with OpenAPI 🚧
+- [x] Generate Swagger with OpenAPI
 - [x] Add unit testing (Testing with Mockk in PokemonService)
 - [x] Add integration testing (Testing with SpringBootTest)
 - [ ] Explore API mocking in integration tests (when calling external service) 🚧 
 
+## Notes
+
 You can find [my notes here](./NOTES.md).
+
+## Swagger
+
+You can find the swagger at http://localhost:8080/swagger-ui/index.html#/ after starting the API.
+
+![Screenshot of the API's Swagger UI in a browser](./swagger-kotlin-api.png)
